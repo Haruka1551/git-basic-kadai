@@ -2,11 +2,11 @@ haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
 $ mkdir git_challenge
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
-$ git init
-Reinitialized existing Git repository in C:/Users/haruy/samurai/.git/
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
 $ cd git_challenge
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/haruy/samurai/git_challenge/.git/
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ touch hello_world.txt
@@ -27,34 +27,24 @@ $ git commit -m "first commit"
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ git log --oneline
 8a4c6c3 (HEAD -> main) first commit
-b847175  first commit
-9612b5d second commit
-b75ac7f first commit
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ echo "こんにちは、世界！" >> hello_world.txt
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ cat hello_world.txt
-Hello,world!
-こんにちは、世界！
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ git add hello_world.txt
 warning: in the working copy of 'git_challenge/hello_world.txt', LF will be replaced by CRLF the next time Git touches it
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git commit -m "third commit"
-[main bf2adb2] third commit
+$ git commit -m "second commit"
+[main bf2adb2] second commit
  1 file changed, 1 insertion(+)
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ git log --oneline
-bf2adb2 (HEAD -> main) third commit
-1d26bae second commit
+bf2adb2 (HEAD -> main) second commit
 8a4c6c3 first commit
-b847175  first commit
-9612b5d second commit
-b75ac7f first commit
+
+
 
 
