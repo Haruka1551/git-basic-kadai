@@ -2,60 +2,59 @@ haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
 $ mkdir git_challenge
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
-$ touch git_challenge/hello_world.txt
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
-$ ls
-git_challenge/  git_tutorial/  kadai_004/  kadai_004move/
+$ git init
+Reinitialized existing Git repository in C:/Users/haruy/samurai/.git/
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai (main)
 $ cd git_challenge
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ ls -l
-total 0
--rw-r--r-- 1 haruy 197609 0 Sep  3 21:24 hello_world.txt
+$ touch hello_world.txt
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ echo "Hello,world!" > hello_world.txt
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ git add hello_world.txt
+warning: in the working copy of 'git_challenge/hello_world.txt', LF will be replaced by CRLF the next time Git touches it
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git diff hello_world.txt
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git add hello_world.txt
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git commit -m "second commit"
-[main 9612b5d] second commit
- 1 file changed, 2 insertions(+), 1 deletion(-)
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git status
-On branch main
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        ../git_tutorial/
-        ../kadai_004move/
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
-$ git log
-commit 9612b5dc8c1fddf01c9002c17e10d6781f3153aa (HEAD -> main)
-Author: Haruka1551 <haruka.yamaguchi02@gmail.com>
-Date:   Wed Sep 3 22:18:52 2025 +0900
-
-    second commit
-
-commit b75ac7faa3ed07796afc1f0e7b60b708567e2764
-Author: Haruka1551 <haruka.yamaguchi02@gmail.com>
-Date:   Wed Sep 3 22:06:08 2025 +0900
-
-    first commit
+$ git commit -m "first commit"
+[main 8a4c6c3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git_challenge/hello_world.txt
 
 haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
 $ git log --oneline
-9612b5d (HEAD -> main) second commit
+8a4c6c3 (HEAD -> main) first commit
+b847175  first commit
+9612b5d second commit
 b75ac7f first commit
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ echo "こんにちは、世界！" >> hello_world.txt
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ cat hello_world.txt
+Hello,world!
+こんにちは、世界！
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ git add hello_world.txt
+warning: in the working copy of 'git_challenge/hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ git commit -m "third commit"
+[main bf2adb2] third commit
+ 1 file changed, 1 insertion(+)
+
+haruy@DESKTOP-SNHEIS1 MINGW64 ~/samurai/git_challenge (main)
+$ git log --oneline
+bf2adb2 (HEAD -> main) third commit
+1d26bae second commit
+8a4c6c3 first commit
+b847175  first commit
+9612b5d second commit
+b75ac7f first commit
+
 
